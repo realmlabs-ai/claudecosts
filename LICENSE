@@ -1,0 +1,136 @@
+REALM LABS LICENSE
+Version 1.0
+
+Copyright (c) 2026 Realm Labs Inc. All rights reserved.
+
+IMPORTANT: By downloading, installing, accessing, or using this software
+and its associated documentation files (the "Software"), you ("you" or
+"Licensee") agree to all of the terms and conditions below. If you do
+not agree to these terms, do not install or use the Software.
+
+1. LICENSE GRANT
+
+Subject to the terms and conditions of this License, Realm Labs Inc
+("Licensor") grants you a non-exclusive, non-transferable,
+non-sublicensable, worldwide, royalty-free license to:
+
+(a) use the Software for your personal purposes or for your own
+    internal business purposes, including use within commercial
+    organizations to support their internal operations; and
+
+(b) modify the Software solely for your own internal business or
+    personal purposes as permitted in (a), or to propose a
+    contribution to the Licensor.
+
+This License grants only the rights expressly stated above. All rights
+not expressly granted are reserved by the Licensor.
+
+2. RESTRICTIONS
+
+Except as expressly permitted in Section 1, you shall not, and shall
+not permit any third party to:
+
+(a) distribute, publish, sublicense, sell, resell, rent, lease, lend,
+    or otherwise transfer or make the Software, or any modified
+    version or derivative work of it, available to any third party,
+    whether for a fee or free of charge;
+
+(b) host the Software, or any modified version of it, and offer it to
+    third parties as a service, including software-as-a-service,
+    managed, or hosted offerings;
+
+(c) embed, bundle, or incorporate the Software, or any portion or
+    derivative work of it, into any product or service made available
+    to third parties;
+
+(d) use any modified version of the Software for any purpose other
+    than your own internal business or personal purposes;
+
+(e) reverse engineer, decompile, or disassemble the Software, except
+    and only to the extent that such activity is expressly permitted
+    by applicable law notwithstanding this limitation; or
+
+(f) alter, remove, or obscure any licensing, copyright, trademark, or
+    other proprietary notices of the Licensor in the Software.
+
+3. CONTRIBUTIONS
+
+If you submit any modification, suggestion, or other contribution
+relating to the Software to the Licensor, you grant the Licensor a
+perpetual, irrevocable, worldwide, royalty-free license to use,
+reproduce, modify, distribute, sublicense, and commercialize that
+contribution without restriction or obligation to you.
+
+4. OWNERSHIP
+
+The Software is licensed, not sold. The Licensor retains all right,
+title, and interest in and to the Software, including all copyrights,
+patents, trademarks, trade secrets, and other intellectual property
+rights therein. Nothing in this License transfers any ownership
+interest in the Software to you. Any modification or derivative work
+you create remains subject to all terms of this License. No rights to
+the Licensor's trademarks are granted.
+
+5. PATENTS
+
+If you or your company make any written claim that the Software
+infringes or contributes to infringement of any patent, all licenses
+granted to you under this License end immediately.
+
+6. TERMINATION
+
+This License is effective until terminated. This License will
+terminate automatically and immediately, without notice from the
+Licensor, if you breach any term of this License. Upon termination,
+you must cease all use of the Software and destroy all copies of the
+Software, including any modified versions, in your possession or
+control. Sections 3, 4, 7, and 8 shall survive any termination of this
+License.
+
+7. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY
+OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE, AND NON-INFRINGEMENT. THE LICENSOR DOES NOT WARRANT
+THAT THE SOFTWARE WILL BE ERROR-FREE, UNINTERRUPTED, OR FREE OF
+HARMFUL COMPONENTS, OR THAT ANY DEFECTS WILL BE CORRECTED. YOU ASSUME
+THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE.
+
+8. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
+THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES WHATSOEVER (INCLUDING,
+WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA,
+BUSINESS INTERRUPTION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF OR
+RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF THE
+LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO
+EVENT SHALL THE LICENSOR'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR
+RELATED TO THIS LICENSE OR THE SOFTWARE EXCEED THE AMOUNT PAID BY YOU
+FOR THE SOFTWARE, OR, IF NO AMOUNT WAS PAID, ONE HUNDRED U.S. DOLLARS
+(USD $100). SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR
+LIMITATION OF CERTAIN DAMAGES, SO SOME OF THE ABOVE LIMITATIONS MAY
+NOT APPLY TO YOU.
+
+9. DEFINITIONS
+
+"Internal business purposes" means use by you or your company to
+support your or your company's own operations, and not for the benefit
+of, or provision to, any third party.
+
+"Your company" is any legal entity, sole proprietorship, or other kind
+of organization that you work for, plus all organizations that have
+control over, are under the control of, or are under common control
+with that organization. Control means ownership of substantially all
+the assets of an entity, or the power to direct its management and
+policies by vote, contract, or otherwise. Control can be direct or
+indirect.
+
+---
+
+For commercial licensing inquiries (distribution, resale, hosting,
+embedding, or OEM use), contact: hello@realmlabs.ai
+
+Realm Labs Inc
+Version 1.0 — June 9, 2026
