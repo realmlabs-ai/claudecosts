@@ -36,8 +36,6 @@ Run all of the commands below from inside this `claudecosts` directory.
 
 ### 2. Start the stack
 
-NOTE: THe LLM_API_KEY is OPTIONAL and ONLY needed for a intent & savings features. Even after providing the API_KEY, your actual Claude Code usage will go through your pre-existing setup (Claude Login or API Key).
-
 ```bash
 LLM_API_KEY=sk-ant-api... CLAUDE_GATEWAY_PORT=9090 UI_PORT=3001 docker compose up -d
 ```
@@ -56,8 +54,7 @@ This pulls the published images, runs the database migrations, and starts every 
 CLAUDE_GATEWAY_PORT=8080
 UI_PORT=3000
 ```
-
-> **⚠️ Without an `LLM_API_KEY`, functionality will be limited.** The stack will still come up and meter traffic, but features that rely on the model — such as intent classification and cost saving analysis — won't be available until you provide a key.
+> **⚠️ Without an `LLM_API_KEY`, functionality will be limited.** The stack will still come up and meter traffic, but features that rely on the model — such as intent classification and cost saving analysis — won't be available until you provide a key. The LLM_API_KEY is not used to make the actual Claude Code calls which will continue to be made through your pre-exising OAuth credentials (Claude Login) or ANTHROPIC_API_KEY.
 
 Once `docker compose up -d` finishes, all services should report as running.
 
