@@ -57,10 +57,7 @@ UI_PORT=3000
 
 > **⚠️ Without an `LLM_API_KEY`, functionality will be limited.** The stack will still come up and meter traffic, but features that rely on the model — such as intent classification and cost saving analysis — won't be available until you provide a key.
 
-Once `docker compose up -d` finishes, all services should report as running:
-
-<!-- TODO: screenshot of `docker compose ps` (or `up -d` output) showing every service healthy/running -->
-![ClaudeCosts stack running — all services healthy](docs/images/setup-success.png)
+Once `docker compose up -d` finishes, all services should report as running.
 
 ### 3. Open the dashboard
 
@@ -70,10 +67,7 @@ With the example ports above, the dashboard is available at:
 http://localhost:3001
 ```
 
-On a fresh install the dashboard is empty until traffic starts flowing through the gateway (next step):
-
-<!-- TODO: screenshot of the empty dashboard on first load -->
-![ClaudeCosts dashboard on first launch — empty, awaiting traffic](docs/images/empty-dashboard.png)
+On a fresh install the dashboard is empty until traffic starts flowing through the gateway (next step).
 
 ### 4. Replace the Anthropic endpoint with the gateway
 
