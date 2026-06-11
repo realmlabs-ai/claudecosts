@@ -4,61 +4,37 @@
 
 **Self-hosted gateway for Claude Code**
 
-[![Start Free](https://img.shields.io/badge/Start_Free-000000?style=for-the-badge&logo=anthropic&logoColor=white)](https://www.claudecosts.com/)
-[![Self-Hosted](https://img.shields.io/badge/Self--Hosted-2ea44f?style=for-the-badge)](https://www.claudecosts.com/)
+[![Self-Hosted](https://img.shields.io/badge/Self--Hosted-2ea44f?style=for-the-badge)](#run-it-yourself)
 [![License: Realm Labs License 1.0](https://img.shields.io/badge/License-Realm_Labs_License_1.0-blue?style=for-the-badge)](LICENSE)
 
-[**Start Free →**](https://www.claudecosts.com/) · [Website](https://www.claudecosts.com/) · [Built by Realm Labs](https://realmlabs.ai)
+Observability, cost breakdown, and saving opportunities for Claude Code.
+
+Built by **[Realm Labs](https://realmlabs.ai)**
 
 </div>
 
 ---
 
-## Understand and Optimize Claude Costs
-
-Observability, cost breakdown, and saving opportunities for Claude Code.
-
----
-
-## Claude bills are climbing and nobody knows why.
-
-From unexpected spikes to opaque billing, teams are flying blind on their Claude costs — and the invoice at the end of the month is the first time they see the damage.
-
-> “I'm back to the drawing board, because the budget I thought I would need is blown away already.”
-> — **Uber**, *The Information*
-
-> “Microsoft is canceling most internal Claude Code licenses — engineers were using it too much to justify the cost.”
-> — **Microsoft**, *The Next Web*
-
-> “The leaderboard was built with good intentions, but the compute costs it generated were too high — so we deleted it.”
-> — **Amazon**, *InfoWorld*
-
----
-
-## See every token. Control every dollar.
-
-ClaudeCosts gateway meters every call, gives you the controls to route, cap, and govern spend before the invoice lands.
-
-### 01 / 03 · Full observability
-Trace every session down to request, response, tool call, and line of code in one live dashboard.
-
-### 02 / 03 · Cost breakdown
-See dollars spent by every user, project, intent, and model. Get alerts on spend and minimize waste.
-
-### 03 / 03 · Risk Mitigation
-Find every unauthorized mcp server, harmful skill, and secret leaked so you can protect your organization from a disaster.
-
----
-
 ## Run it yourself
 
-Install and connect your enterprise Claude Code in minutes. ClaudeCosts runs as a set of Docker containers — a Postgres database, the backend, the metering **gateway**, and the **dashboard** UI. All you need is [Docker](https://docs.docker.com/get-docker/) with Compose.
+Install and connect your **personal, team, or enterprise** Claude Code in minutes. ClaudeCosts runs as a set of Docker containers — a Postgres database, the backend, the metering **gateway**, and the **dashboard** UI. All you need is [Docker](https://docs.docker.com/get-docker/) with Compose.
 
 ### Recommended hardware
 
 A single host with **8 CPUs** and **16–32 GB RAM** is the sweet spot. Run it on **any cloud provider** — ideally a **Linux** server — though **macOS** and **Windows** are supported as well.
 
-### 1. Start the stack
+### 1. Clone the repo
+
+The stack is defined in [docker-compose.yml](docker-compose.yml), so you need a local copy of this repo before you can bring it up.
+
+```bash
+git clone https://github.com/realmlabs-ai/claudecosts.git
+cd claudecosts
+```
+
+Run all of the commands below from inside this `claudecosts` directory.
+
+### 2. Start the stack
 
 ```bash
 LLM_API_KEY=sk-ant-api... CLAUDE_GATEWAY_PORT=9090 UI_PORT=3001 docker compose up -d
@@ -81,7 +57,12 @@ UI_PORT=3000
 
 > **⚠️ Without an `LLM_API_KEY`, functionality will be limited.** The stack will still come up and meter traffic, but features that rely on the model — such as intent classification and cost saving analysis — won't be available until you provide a key.
 
-### 2. Open the dashboard
+Once `docker compose up -d` finishes, all services should report as running:
+
+<!-- TODO: screenshot of `docker compose ps` (or `up -d` output) showing every service healthy/running -->
+![ClaudeCosts stack running — all services healthy](docs/images/setup-success.png)
+
+### 3. Open the dashboard
 
 With the example ports above, the dashboard is available at:
 
@@ -89,15 +70,22 @@ With the example ports above, the dashboard is available at:
 http://localhost:3001
 ```
 
-### 3. Point Claude Code at the gateway
+On a fresh install the dashboard is empty until traffic starts flowing through the gateway (next step):
 
-Route your Claude Code traffic through the gateway so every call is metered:
+<!-- TODO: screenshot of the empty dashboard on first load -->
+![ClaudeCosts dashboard on first launch — empty, awaiting traffic](docs/images/empty-dashboard.png)
+
+### 4. Replace the Anthropic endpoint with the gateway
+
+Claude Code normally talks to Anthropic directly. To meter every call, point it at the gateway instead by setting `ANTHROPIC_BASE_URL`:
 
 ```bash
 export ANTHROPIC_BASE_URL=http://localhost:9090
 ```
 
-📖 **See [Connecting Claude Code to the gateway](docs/connect-claude-code.md)** for full setup instructions — both for an **individual user** and **organization-wide (enterprise)** via Anthropic managed settings.
+> **⚠️ `export` only applies to the current terminal session.** It does **not** carry over to new terminals, and it does **not** affect Claude Code running in your IDE or Desktop app. For persistent setup — and to route the IDE/Desktop app — set `ANTHROPIC_BASE_URL` in your Claude Code settings or roll it out org-wide via Anthropic managed settings.
+
+📖 **See [Connecting Claude Code to the gateway](docs/connect-claude-code.md)** for full setup instructions — covering an **individual user** (shell, user, and per-project settings) and **organization-wide (enterprise)** rollout via Anthropic managed settings.
 
 ### Stop the stack
 
@@ -114,13 +102,7 @@ Run into a hiccup? There are two ways to reach us:
 - **[Open a GitHub issue](../../issues)** — for bugs, unexpected behavior, or feature requests.
 - **[feedback@realmlabs.ai](mailto:feedback@realmlabs.ai)** — if you'd rather drop us an email.
 
-Also see **[LIMITATIONS.md](LIMITATIONS.md)** for known constraints around sub-agent visibility, data persistence, and production scale.
-
----
-
-## Stop panicking. Start saving.
-
-👉 **[Start Free](https://www.claudecosts.com/)**
+Also see **[LIMITATIONS.md](docs/LIMITATIONS.md)** for known constraints around sub-agent visibility, data persistence, and production scale.
 
 ---
 

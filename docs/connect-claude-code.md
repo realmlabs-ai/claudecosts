@@ -34,6 +34,8 @@ For a local stack started with `CLAUDE_GATEWAY_PORT=9090`, that's:
 export ANTHROPIC_BASE_URL=http://localhost:9090
 ```
 
+> **⚠️ `export` is scoped to the current terminal only.** It does not persist to new terminals, and it does **not** affect Claude Code running in your IDE or Desktop app — those don't inherit your shell's environment. To route the IDE/Desktop app or every new shell, use one of the persistent options below instead.
+
 **Persistent (every new shell):** add the same line to your shell profile — `~/.zshrc`, `~/.bashrc`, etc.
 
 ```bash
