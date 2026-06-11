@@ -2,7 +2,7 @@
 
 # 😱 ClaudeCosts
 
-**Self-hosted gateway for Claude Code**
+**Self-hosted gateway for Claude Code [Personal/Team/Enterprise]**
 
 [![Self-Hosted](https://img.shields.io/badge/Self--Hosted-2ea44f?style=for-the-badge)](#run-it-yourself)
 [![License: Realm Labs License 1.0](https://img.shields.io/badge/License-Realm_Labs_License_1.0-blue?style=for-the-badge)](LICENSE)
@@ -21,7 +21,7 @@ Install and connect your **personal, team, or enterprise** Claude Code in minute
 
 ### Recommended hardware
 
-A single host with **8 CPUs** and **16–32 GB RAM** is the sweet spot. Run it on **any cloud provider** — ideally a **Linux** server — though **macOS** and **Windows** are supported as well.
+A single host with **8 CPUs** and **16–32 GB RAM** is the sweet spot (for example, Macbook Pro). Run it on **any cloud provider** — ideally a **Linux** server — though **macOS** and **Windows** are supported as well.
 
 ### 1. Clone the repo
 
@@ -35,6 +35,8 @@ cd claudecosts
 Run all of the commands below from inside this `claudecosts` directory.
 
 ### 2. Start the stack
+
+NOTE: THe LLM_API_KEY is OPTIONAL and ONLY needed for a intent & savings features. Even after providing the API_KEY, your actual Claude Code usage will go through your pre-existing setup (Claude Login or API Key).
 
 ```bash
 LLM_API_KEY=sk-ant-api... CLAUDE_GATEWAY_PORT=9090 UI_PORT=3001 docker compose up -d
@@ -72,21 +74,22 @@ On a fresh install the dashboard is empty until traffic starts flowing through t
 ### 4. Replace the Anthropic endpoint with the gateway
 
 Claude Code normally talks to Anthropic directly. To meter every call, point it at the gateway instead by setting `ANTHROPIC_BASE_URL`:
-
+QUICK START (only applies to this terminal session)
 ```bash
 export ANTHROPIC_BASE_URL=http://localhost:9090
 ```
 
 > **⚠️ `export` only applies to the current terminal session.** It does **not** carry over to new terminals, and it does **not** affect Claude Code running in your IDE or Desktop app. For persistent setup — and to route the IDE/Desktop app — set `ANTHROPIC_BASE_URL` in your Claude Code settings or roll it out org-wide via Anthropic managed settings.
 
-📖 **See [Connecting Claude Code to the gateway](docs/connect-claude-code.md)** for full setup instructions — covering an **individual user** (shell, user, and per-project settings) and **organization-wide (enterprise)** rollout via Anthropic managed settings.
+FULL INTEGRATION 
+📖 **See [Connecting Claude Code to the gateway](docs/connect-claude-code.md)** for full setup instructions — covering an **individual user** (shell, IDE, and per-project settings) and **organization-wide (enterprise)** rollout via Anthropic managed settings.
 
 ### Stop the stack
 
 ```bash
 docker compose down
 ```
-
+If you only exported the base url, restart your terminal to go to Anthropic directly. If you made a system or team/enterprise level change, please remove the base_url from local settings.json or managed_setting.json repectively.
 ---
 
 ## Feedback & support
