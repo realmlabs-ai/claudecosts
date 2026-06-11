@@ -96,7 +96,9 @@ If you only exported the base URL, restart your terminal to go to Anthropic dire
 
 ## Feedback & support
 
-Run into a hiccup? There are two ways to reach us:
+**[Join our Discord →](https://discord.gg/6RPjGBEZW)** — the best place to share feedback, ask questions, and connect with the community. We're most active there.
+
+Prefer another channel?
 
 - **[Open a GitHub issue](../../issues)** — for bugs, unexpected behavior, or feature requests.
 - **[feedback@realmlabs.ai](mailto:feedback@realmlabs.ai)** — if you'd rather drop us an email.
