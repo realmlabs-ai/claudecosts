@@ -74,14 +74,17 @@ On a fresh install the dashboard is empty until traffic starts flowing through t
 ### 4. Replace the Anthropic endpoint with the gateway
 
 Claude Code normally talks to Anthropic directly. To meter every call, point it at the gateway instead by setting `ANTHROPIC_BASE_URL`:
-QUICK START (only applies to this terminal session)
+
+**Quick start** (only applies to this terminal session):
+
 ```bash
 export ANTHROPIC_BASE_URL=http://localhost:9090
 ```
 
 > **⚠️ `export` only applies to the current terminal session.** It does **not** carry over to new terminals, and it does **not** affect Claude Code running in your IDE or Desktop app. For persistent setup — and to route the IDE/Desktop app — set `ANTHROPIC_BASE_URL` in your Claude Code settings or roll it out org-wide via Anthropic managed settings.
 
-FULL INTEGRATION 
+**Full integration:**
+
 📖 **See [Connecting Claude Code to the gateway](docs/connect-claude-code.md)** for full setup instructions — covering an **individual user** (shell, IDE, and per-project settings) and **organization-wide (enterprise)** rollout via Anthropic managed settings.
 
 ### Stop the stack
@@ -89,7 +92,9 @@ FULL INTEGRATION
 ```bash
 docker compose down
 ```
-If you only exported the base url, restart your terminal to go to Anthropic directly. If you made a system or team/enterprise level change, please remove the base_url from local settings.json or managed_setting.json repectively.
+
+If you only exported the base URL, restart your terminal to go to Anthropic directly. If you made a system or team/enterprise level change, please remove the `ANTHROPIC_BASE_URL` from local `settings.json` or `managed-settings.json` respectively.
+
 ---
 
 ## Feedback & support
